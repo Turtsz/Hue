@@ -159,10 +159,7 @@ static PHLightState[] states;
                 
                 
                 }
-        
-        for(int k = 0; k < 100; k++){
-                sleep(10);
-        }
+        sleep(10000);
      }catch(Exception e){
      System.out.println("NETWORK ERROR");
      }
@@ -177,7 +174,7 @@ static PHLightState[] states;
     
     static int color = 0;
     public static void followers(List<PHLight> allLights, PHBridge bridge){
-        
+        System.out.println("followers");
         states = new PHLightState[allLights.size()];
         
         getColor(allLights);
@@ -192,8 +189,8 @@ static PHLightState[] states;
                 
                 lightState.setOn(true);
                 lightState.setHue(color);
-                lightState.setSaturation(25);
-                lightState.setBrightness(255);
+                lightState.setSaturation(254);
+                lightState.setBrightness(254);
     
                 bridge.updateLightState(lightIdentifer, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
                 try{
@@ -209,7 +206,7 @@ static PHLightState[] states;
     }
     
     public static void likes(List<PHLight> allLights, PHBridge bridge){
-        
+        System.out.println("likes");
         states = new PHLightState[allLights.size()];
         
         getColor(allLights);
@@ -227,8 +224,8 @@ static PHLightState[] states;
                 
                 lightState.setOn(true);
                 lightState.setHue(color);
-                lightState.setSaturation(25);
-                lightState.setBrightness(255);
+                lightState.setSaturation(254);
+                lightState.setBrightness(254);
     
                 bridge.updateLightState(lightIdentifer, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
               try{
@@ -253,8 +250,8 @@ static PHLightState[] states;
                 
                 lightState.setOn(true);
                 lightState.setHue(color);
-                lightState.setSaturation(25);
-                lightState.setBrightness(255);
+                lightState.setSaturation(254);
+                lightState.setBrightness(254);
     
                 bridge.updateLightState(lightIdentifer, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
               try{
@@ -270,7 +267,6 @@ static PHLightState[] states;
     
     public static void comments(List<PHLight> allLights, PHBridge bridge){
         states = new PHLightState[allLights.size()];
-        
         getColor(allLights);
         j = 0;
         
@@ -285,8 +281,8 @@ static PHLightState[] states;
                 
                 lightState.setOn(true);
                 lightState.setHue(color);
-                lightState.setSaturation(25);
-                lightState.setBrightness(255);
+                lightState.setSaturation(254);
+                lightState.setBrightness(254);
     
                 bridge.updateLightState(lightIdentifer, lightState, null);  // null is passed here as we are not interested in the response from the Bridge.
                try{
