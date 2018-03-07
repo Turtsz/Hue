@@ -192,11 +192,8 @@ static PHLightState[] states;
         getColor(allLights);
         color = 3000;
         
-        while(color  < 1600 || color > 3000){
+        while(color < 65280 - 300){
             color += 300;
-                if(color >= 65335 - 500){
-                color = 0;
-                }
         allLights.forEach((light) ->{
                 String lightIdentifer = light.getIdentifier();
                 
@@ -215,13 +212,10 @@ static PHLightState[] states;
         });
         }
         
-        color -= 500;
+        color -= 300;
         
-           while(color  < 1600 || color > 3000){
+           while(color > 3000){
                color -= 300;
-                if(color < 400){
-                color = 65335;
-                }
         allLights.forEach((light) ->{
                 String lightIdentifer = light.getIdentifier();
                 
