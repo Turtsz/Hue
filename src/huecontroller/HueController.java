@@ -5,39 +5,19 @@
  */
 package huecontroller;
 
-import com.philips.lighting.hue.sdk.PHAccessPoint;
-import com.philips.lighting.hue.sdk.wrapper.HueLog;
-import com.philips.lighting.hue.sdk.wrapper.Persistence;
-import com.philips.lighting.hue.sdk.wrapper.connection.BridgeConnectionType;
-import com.philips.lighting.hue.sdk.wrapper.discovery.BridgeDiscovery;
-import com.philips.lighting.hue.sdk.wrapper.discovery.BridgeDiscoveryCallback;
-import com.philips.lighting.hue.sdk.wrapper.domain.Bridge;
-import com.philips.lighting.hue.sdk.wrapper.domain.BridgeBuilder;
-import com.philips.lighting.hue.sdk.wrapper.domain.ReturnCode;
-import java.net.NetworkInterface;
 import java.util.List;
 import com.philips.lighting.hue.sdk.PHHueSDK;
-import com.philips.lighting.hue.sdk.utilities.PHUtilities;
-import com.philips.lighting.hue.sdk.utilities.impl.Color;
-import com.philips.lighting.hue.sdk.wrapper.domain.device.light.LightState;
 import com.philips.lighting.model.PHBridge;
 import com.philips.lighting.model.PHLight;
-import com.philips.lighting.model.PHLight.PHLightColorMode;
 import com.philips.lighting.model.PHLightState;
-import huecontroller.HueProperties;
-import java.io.IOException;;
 import static java.lang.Thread.sleep;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 
-import javax.net.ssl.HttpsURLConnection;
 import org.json.hue.JSONArray;
 import org.json.hue.JSONObject;
 
